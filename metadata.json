@@ -1,0 +1,5 @@
+{
+  "name": "VIDANTA_ANALYZER_EDO CUENTA_V5",
+  "description": "An intelligent dashboard to analyze hotel PDF statements, clean transaction data, and categorize expenses using Gemini 3.",
+  "requestFramePermissions": []
+}

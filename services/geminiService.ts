@@ -86,9 +86,11 @@ export const analyzeStatement = async (file: File): Promise<AnalysisResult> => {
     7. Total Amount: This is the most important field. Find the final total printed on the statement (e.g., 'Total MxN', 'Total Charges'). Use this value for the 'totalAmount' field. THIS IS THE SOURCE OF TRUTH AND IS MORE ACCURATE THAN MANUALLY SUMMING THE TRANSACTION LINES. For example, if the document shows 'Total MxN 25,224.10', you must use 25224.10.
   `;
 
+  const geminiModel = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
+
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-3-flash-preview',
+      model: geminiModel,
       contents: {
         parts: [
           {

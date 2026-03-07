@@ -3,6 +3,7 @@ import { AnalysisResult, Currency, Language, Transaction, Category } from '../ty
 import { TRANSLATIONS, EXCHANGE_RATE_MXN_TO_USD, EXCHANGE_RATE_USD_TO_MXN } from '../constants';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { Search, ArrowUpDown, Filter, Calendar, Download } from 'lucide-react';
+import mayanPalaceLogo from '../MAYAN PALACE SIN FONDO.png';
 
 interface Props {
   data: AnalysisResult;
@@ -201,7 +202,7 @@ export const Dashboard: React.FC<Props> = ({ data, language, currency, onReset }
         <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-6">
           <div className="flex items-center">
             <img 
-              src="/MAYAN PALACE SIN FONDO.png" 
+              src={mayanPalaceLogo} 
               alt="Mayan Palace" 
               className="h-16 md:h-20 w-auto object-contain"
               referrerPolicy="no-referrer"

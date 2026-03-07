@@ -9,6 +9,7 @@ import { DersanIshInfo } from './components/DersanIshInfo';
 import Footer from './components/Footer';
 import { Upload, Loader2, AlertCircle, Menu, X, DollarSign, Euro, Coins, FileText, Search, Sparkles, Info, Settings, ChevronRight } from 'lucide-react';
 import { EXCHANGE_RATE_USD_TO_MXN, EXCHANGE_RATE_EUR_TO_MXN, EXCHANGE_RATE_CAD_TO_MXN } from './constants';
+import vidantaLogo from './vidanta-logo.png'
 
 const App: React.FC = () => {
   const [language, setLanguage] = useState<Language>(Language.ES);
@@ -73,8 +74,7 @@ const App: React.FC = () => {
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mt-1 -ml-[15px]">
               {!logoError ? (
                 <img 
-                  src="/vidanta-logo.png" 
-                  alt="Vidanta Logo" 
+              src={vidantaLogo}                  alt="Vidanta Logo" 
                   className="h-20 sm:h-28 w-auto object-contain" 
                   onError={() => setLogoError(true)}
                 />

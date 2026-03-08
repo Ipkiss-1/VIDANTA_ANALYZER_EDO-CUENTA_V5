@@ -72,17 +72,11 @@ const App: React.FC = () => {
 
             {/* Center: Logo (shifted 15px left) */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mt-1 -ml-[15px]">
-              {!logoError ? (
-                <img 
-              src={vidantaLogo}                  alt="Vidanta Logo" 
-                  className="h-20 sm:h-28 w-auto object-contain" 
-                  onError={() => setLogoError(true)}
-                />
-              ) : (
-                <div className="h-14 w-14 sm:h-20 sm:w-20 rounded-full bg-[#1e2f5d] flex items-center justify-center shrink-0 shadow-sm">
-                  <span className="text-white font-bold text-2xl tracking-wider">GV</span>
-                </div>
-              )}
+              <img 
+              src={vidantaLogo} 
+              alt="Vidanta Logo" 
+              className="h-20 sm:h-28 w-auto object-contain"
+            />
             </div>
 
             {/* Right: Toggle */}
